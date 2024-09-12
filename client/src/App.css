@@ -1,0 +1,96 @@
+body{
+  background-color: #f0f0f0;
+}
+nav{
+  text-align: center;
+  background-color: #2ecc71;
+}
+nav a{
+  display: inline-block;
+  padding: 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  position: relative;
+}
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 100%; /* Make the line as wide as the link */
+  height: 5px; /* Line thickness */
+  background-color: black; /* Line color */
+  bottom: 0; /* Position the line at the bottom */
+  left: 0;
+  transform: scaleX(0); /* Initially make the line hidden */
+  transform-origin: bottom right; /* Line grows from the right side */
+  transition: transform 0.3s ease-out; /* Smooth animation */
+}
+
+nav a:hover::after {
+  transform: scaleX(1); /* Show the line when hovering */
+  transform-origin: bottom left; /* Line grows to the left side */
+
+}
+
+main{
+  width: 70%; /* Make the width 70% of the screen */
+  max-width: 1200px;
+  margin: 20px auto;
+  text-align: center;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 2px 2px rgba(0,0,0,.1);
+}
+
+ul{
+  padding-left:0;
+}
+ul li{
+  display: block;
+}
+
+/* Add these styles to your existing CSS */
+
+.past-due {
+  color: red;
+  position: relative;
+}
+
+.past-due .exclamation-mark {
+  text-indent: -10px;
+  position: absolute;
+  top: 0;
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 1px;
+  margin-right: 20px;
+}
+
+
+.todo-text {
+  margin-right: 10px;
+}
+
+
+.priority-text {
+  margin-right: 20px;
+  text-indent: 20px;
+}
+
+.due-date-text {
+  /* No additional spacing needed, but you can add margin if desired */
+}
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+ul li {
+  margin-bottom: 5px; /* Space between list items */
+}
+
+.form-check-input {
+  accent-color: #4caf50;
+}
